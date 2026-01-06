@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblia Reina-Valera 1909 Modernizada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="title-area">Biblia RV1909</div>
+    <div class="controls">
+        <select id="book-select"></select>
+        <select id="chapter-select"></select>
+        <button id="theme-toggle" title="Modo Oscuro/Claro">🌓</button>
+        <button id="font-increase" title="Aumentar Letra">A+</button>
+        <button id="font-decrease" title="Disminuir Letra">A-</button>
+        <button id="search-toggle" title="Buscar">🔍</button>
+        <button id="menu-toggle" title="Menú">☰</button>
+    </div>
+</header>
+
+<div id="search-panel">
+    <div style="display: flex; gap: 10px;">
+        <input type="text" id="search-input" placeholder="Buscar palabra o frase..." style="flex-grow: 1;">
+        <button id="search-btn">Buscar</button>
+    </div>
+    <div id="search-results"></div>
+</div>
+
+<main id="reader">
+    <!-- Bible text will be loaded here -->
+</main>
+
+<div class="nav-buttons" id="nav-buttons">
+    <button id="prev-chapter">← Anterior</button>
+    <button id="next-chapter">Siguiente →</button>
+</div>
+
+<!-- Modals -->
+<div id="menu-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" id="close-menu">&times;</span>
+        <h3>Menú</h3>
+        <button id="daily-reading-btn" style="width: 100%; margin-bottom: 10px;">📅 Lectura Diaria</button>
+        <button id="bookmarks-btn" style="width: 100%; margin-bottom: 10px;">🔖 Marcadores</button>
+        <button id="history-btn" style="width: 100%; margin-bottom: 10px;">🕒 Historial</button>
+        <div id="menu-content"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
